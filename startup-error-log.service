@@ -1,0 +1,11 @@
+[Unit]
+Description=Start up log programs
+
+[Service]
+Type=simple
+ExecStart=~/finalExam/logs.sh | ~/finalExam/backup-logs.sh
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
